@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    overflow: overlay;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.readmore_and_tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tags .tag_item {
+    display: inline-block;
+    max-width: 100% !important;
+    margin: 0 3px 3.2px 0;
+    padding: 0 7.68px;
+    font-weight: 300px;
+    border: 1px solid #dddddd;
+    border-radius: 160px;
+    color: #aaa;
+    line-height: 19.2px;
+    height: 21px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item .nav-link {
+    user-select: none;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 36px 0;
+}
+
+#loading .dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 1px;
+    background-color: #5cb85c;
+}
+
+.dot1 {
+    animation: jump-up 0.6s 0.1s linear infinite;
+}
+.dot2 {
+    animation: jump-up 0.6s 0.2s linear infinite;
+}
+.dot3 {
+    animation: jump-up 0.6s 0.3s linear infinite;
+}
+
+@keyframes jump-up {
+    50% {
+        transform: translate(0, 10px);
+    }
 }
